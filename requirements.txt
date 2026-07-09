@@ -1,0 +1,7 @@
+google-play-scraper
+pandas
+openai
+streamlit
+plotly
+tenacity
+python-dotenv
