@@ -44,18 +44,8 @@ game-review-analyzer/
     └── calibration.md # 校准实验记录(v1/v2 准确率)
 ```
 
-## 4. 分工(和零基础指南的差别:代码由 Claude Code 写)
 
-| 事项 | 谁做 |
-|------|------|
-| 写全部代码、调试、跑通 | **Claude Code** |
-| 注册 DeepSeek、充值 ~10 元、拿 API Key 填进 .env | **你**(约 10 分钟) |
-| 选定要分析的游戏(Google Play 包名) | **你** |
-| **人工标注 50 条评论**(校准实验的黄金数据,靠你 8 年游戏经验) | **你**(约 1 小时) |
-| Prompt 迭代(把你标注中发现的错误做成 few-shot 例子) | 一起 |
-| README、GitHub 推送、简历措辞 | Claude Code 起草,你确认 |
-
-## 5. 里程碑
+## 4. 里程碑
 
 ### M0 环境(半小时内)
 - venv + pip 安装依赖;你注册 DeepSeek 填 .env
@@ -88,15 +78,11 @@ game-review-analyzer/
 - GitHub 仓库(kobe8244)+ README(简介、截图、功能对齐 JD、快速开始、校准结果表)
 - 简历 bullet 更新
 
-## 6. 风险与注意事项
+## 5. 风险与注意事项
 
 - **网络**:google-play-scraper 需要能访问 Google Play,国内可能要代理
 - **密钥安全**:.env 已 gitignore;绝不提交(校园导航项目里踩过一次坑)
 - **Python 3.14 兼容性**:个别库若未适配,降级到 3.12 即可,结构不变
 - **JSON 解析失败**:analyzer 里已设计容错(剥 markdown 代码块 + tenacity 重试)
 
-## 7. 下一步行动
 
-1. 你:注册 https://platform.deepseek.com → 充 10 元 → 建 API Key
-2. 你:告诉我要分析哪款游戏
-3. Claude Code:从 M0 开始逐里程碑实现
