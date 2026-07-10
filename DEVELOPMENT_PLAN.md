@@ -74,9 +74,6 @@ game-review-analyzer/
 3. 重跑同 50 条 = **v2 准确率**,两轮数字写进 docs/calibration.md 和 README
 - 产出话术:"通过人工标注校准与 Prompt 迭代,情感分类准确率从 X% 提升至 Y%"
 
-### M5 开源与简历
-- GitHub 仓库(kobe8244)+ README(简介、截图、功能对齐 JD、快速开始、校准结果表)
-- 简历 bullet 更新
 
 ## 5. 风险与注意事项
 
