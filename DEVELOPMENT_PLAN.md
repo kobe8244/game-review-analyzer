@@ -5,7 +5,8 @@
 
 ## 1. 项目目标
 
-抓取 Google Play 上某款游戏的多语言玩家评论(英/日/韩),用 LLM 逐条分析:
+抓取 Google Play 上 **NBA 2K26 MyTEAM Mobile**(包名 `com.t2ksports.myteam2k26v2`)
+的多语言玩家评论(英/西/葡/法/繁中),用 LLM 逐条分析:
 
 - **情感分类**(positive / negative / neutral / mixed)
 - **主题标签**(抽卡付费、剧情、角色、优化性能、活动、平衡性、本地化、客服…)
@@ -61,7 +62,8 @@ game-review-analyzer/
 - 验收:`python test_api.py` 能打印出一句 LLM 回复
 
 ### M1 数据抓取
-- scraper.py 抓 3 个语言区(en-US / ja-JP / ko-KR)各 ~300 条
+- scraper.py 抓 5 个语言区:en-US(~300)/ es-ES(~300)/ pt-BR(~100)/
+  fr-FR(~150)/ zh-TW(~120)——日/韩区该游戏评论过少(6 条/0 条),已实测放弃
 - 验收:`data/reviews_raw.csv` 有 ~900 条去重评论
 - ⚠️ 风险:国内网络访问 Google Play 可能需要代理;抓不到就先用 50 条小样本或换网络
 

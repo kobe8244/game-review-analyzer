@@ -2,7 +2,8 @@
 
 ## Project Overview
 Portfolio project for a game-industry AI/analytics role. Scrapes
-multi-language Google Play reviews, analyzes them per-review with an
+multi-language Google Play reviews of NBA 2K26 MyTEAM Mobile
+(com.t2ksports.myteam2k26v2), analyzes them per-review with an
 LLM (sentiment, topics, localization issues, summary), and presents
 results in a Streamlit dashboard. Includes a human-labelled
 calibration experiment (accuracy v1 -> v2 via prompt iteration).
@@ -22,7 +23,7 @@ Code writes and runs the code. See DEVELOPMENT_PLAN.md for milestones.
 
 ## Project Structure
 src/
-  scraper.py    # fetch en/ja/ko reviews -> data/reviews_raw.csv
+  scraper.py    # fetch en/es/pt/fr/zh-TW reviews -> data/reviews_raw.csv
   prompts.py    # all prompts centralized (few-shot iteration happens here)
   analyzer.py   # per-review LLM analysis, checkpoint/resume, JSON output
 app.py          # Streamlit dashboard
